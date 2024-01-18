@@ -36,4 +36,4 @@ class Basket(models.Model):
         return f'Корзина для {self.user.username} | Продукт {self.product.name}'
 
     def sum(self):
-        return self.quantity  * self.product.price
+        return self.quantity * self.product.price
