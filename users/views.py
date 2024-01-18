@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 
 
 def login(request):
-    if request.method =='POST':
+    if request.method == 'POST':
         form = UserLoginForm(data=request.POST)
         if form.is_valid():
             username = request.POST['username']
@@ -34,6 +34,7 @@ def register(request):
         form = UserRegistrationForm()
     context = {'form': form}
     return render(request, 'users/register.html', context)
+
 
 @login_required
 def profile(request):
